@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'net.neoforged.moddev' version '2.0.78'
+}
+
+version = mod_version
+group = 'com.example.decompactingupgrade'
+base { archivesName = mod_id }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+repositories {
+    maven { url = 'https://maven.su5ed.dev/releases' }
+    maven { url = 'https://modmaven.dev' }
+    maven { url = 'https://api.modrinth.com/maven' }
+}
+
+neoForge {
+    version = neo_version
+    runs { client { client() } }
+    mods { "${mod_id}" { sourceSet sourceSets.main } }
+}
+
+dependencies {
+    // Modrinth maven: project slug "sophisticated-core", version = file version
+    implementation "maven.modrinth:sophisticated-core:${sophisticatedcore_version}"
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": ["IDI", "IUI", "IPI"],
+  "key": {
+    "I": { "item": "minecraft:iron_ingot" },
+    "D": { "item": "minecraft:dropper" },
+    "U": { "item": "sophisticatedcore:upgrade_base" },
+    "P": { "item": "minecraft:piston" }
+  },
+  "result": { "id": "decompactingupgrade:decompacting_upgrade", "count": 1 }
+}
